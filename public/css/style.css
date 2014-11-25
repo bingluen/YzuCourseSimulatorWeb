@@ -1,0 +1,47 @@
+.searchReslut {
+    display: none;
+}
+
+.loadingbar {
+    margin-top: 50px;
+    display: none;
+}
+
+#courseSearchFrom {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.table-hover > tbody > tr:hover > .coursebutton {
+    display: block;
+}
+
+.table-hover > tbody > tr > .coursebutton {
+    display: none;
+}
+
+.table-hover > tbody > tr:hover > .coursebutton-inverse {
+    display: none;
+}
+
+.table-hover > tbody > tr > .coursebutton-inverse {
+    display: block;
+}
+
+.table-hover > tbody > tr > td:hover > .coursebutton {
+    display: block;
+    z-index: 1;
+    float: right;
+}
+
+.table-hover > tbody > tr > td > .coursebutton {
+    display: none;
+}
+
+.columT {
+    width: 20%;
+}
+
+.colum {
+    width: 16%;
+}
