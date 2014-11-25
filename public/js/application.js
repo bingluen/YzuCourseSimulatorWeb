@@ -9,7 +9,7 @@ function add(time, course) {
 }
 
 function removeCourse(time) {
-    var position = time.split(',');
+    var position = time.split(', ');
     for(var i = 0;i < position.length;i++) {
         $('#'+position[i]).html('');
         $('#'+position[i]).removeAttr('onClick');
