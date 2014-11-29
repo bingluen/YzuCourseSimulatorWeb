@@ -14,8 +14,6 @@
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- bootstrap -->
     <script src="<?php echo URL; ?>public/js/bootstrap.min.js"></script>
-    <!-- our JavaScript -->
-    <script src="<?php echo URL; ?>public/js/application.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse" role="navigation">
@@ -33,6 +31,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="/CourseSelection/">選課模擬系統</a></li>
+        <li><a href="/CourseSelection/CatchCourse">課程資訊擷取</a></li>
       </ul>
       <p class="navbar-text navbar-right">
         <a class="navbar-link" href=""></a>

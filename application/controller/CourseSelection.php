@@ -26,7 +26,7 @@ class CourseSelection extends Controller
     public function Search()
     {
         $searchModel = $this->loadModel('searchCourse');
-        if(!preg_match('/[[:cntrl:][:punct:][:space:]]/', $_POST['key']))
+        if(!empty($_POST['key']) && !preg_match('/[[:cntrl:][:punct:][:space:]]/', $_POST['key']))
             echo json_encode($searchModel->searchCourse($_POST['key']));
     }
 }
