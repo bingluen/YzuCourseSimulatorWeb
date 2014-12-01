@@ -30,8 +30,8 @@
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/CourseSelection/">選課模擬系統</a></li>
-        <li><a href="/CourseSelection/CatchCourse">課程資訊擷取</a></li>
+        <li><a href="<?=URL?>">選課模擬系統</a></li>
+        <li><a href="<?=URL?>CatchCourse">課程資訊擷取</a></li>
       </ul>
       <p class="navbar-text navbar-right">
         <a class="navbar-link" href=""></a>
