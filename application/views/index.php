@@ -69,6 +69,7 @@ $time = array("08:10~09:00", "09:10~10:00", "10:10~11:00", "11:10~12:00",
                 <th class="colum">Wen.</th>
                 <th class="colum">Thu.</th>
                 <th class="colum">Fri.</th>
+                <th class="colum">Sat.</th>
                 <!--<th class="colum">Sat.</th>-->
             </thead>
             <?php for($i = 1;$i < 13;$i++) {?>
@@ -79,7 +80,7 @@ $time = array("08:10~09:00", "09:10~10:00", "10:10~11:00", "11:10~12:00",
                 <td id="3<?=str_pad($i, 2,'0',STR_PAD_LEFT);?>"></td>
                 <td id="4<?=str_pad($i, 2,'0',STR_PAD_LEFT);?>"></td>
                 <td id="5<?=str_pad($i, 2,'0',STR_PAD_LEFT);?>"></td>
-                <!--<td id="6<?=str_pad($i, 2,'0',STR_PAD_LEFT);?>"></td>-->
+                <td id="6<?=str_pad($i, 2,'0',STR_PAD_LEFT);?>"></td>
             </tr>
             <?php } ?>
         </table>
