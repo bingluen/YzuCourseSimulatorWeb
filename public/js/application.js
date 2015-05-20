@@ -1,5 +1,5 @@
 function add(time, course) {
-    var position = time.split(', ');
+    var position = time.split(',');
     for(var i = 0;i < position.length; i++) {
         var content = '<div id="button'+position[i]+'" class="coursebutton"><a href="#" class="glyphicon glyphicon-remove" onClick="removeCourse(\u0027'+time+'\u0027)"></a></div><div>'+course+'</div>';
         $('#'+position[i]).html(content);
@@ -22,8 +22,8 @@ $(document).ready(
         $('#myModal').modal('show');
         $('#searchButton').click(
             function() {
-                $('.loadingbar').show();
-                $('.searchReslut').hide();
+                $('#animationProcess').show();
+                $('#resultTable').hide();
                 $('#searchReslut tr').remove();
                 $.ajax({
                     url: '/CourseSelection/Search/',
@@ -31,8 +31,8 @@ $(document).ready(
                     type: 'post',
                     data: {key: $('#keyWord').val()},
                     success: function(response) {
-                        $('.loadingbar').hide();
-                        $('.searchReslut').show();
+                        $('#animationProcess').hide();
+                        $('#resultTable').show();
                         displayResult(response);
                     },
                     error: function(xth) {
