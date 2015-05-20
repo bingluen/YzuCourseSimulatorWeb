@@ -26,7 +26,7 @@ $(document).ready(
                 $('.searchReslut').hide();
                 $('#searchReslut tr').remove();
                 $.ajax({
-                    url: '/CourseSelection/CourseSelection/Search/',
+                    url: '/CourseSelection/Search/',
                     dataType: 'json',
                     type: 'post',
                     data: {key: $('#keyWord').val()},
