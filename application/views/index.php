@@ -38,7 +38,11 @@ $time = array("08:10~09:00", "09:10~10:00", "10:10~11:00", "11:10~12:00",
             </div>
         </div>
         <div class="row">
-            <table class="table table-hover searchReslut">
+            <div id="animationProcess" class="progress progress-striped active loadingbar">
+                <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                </div>
+            </div>
+            <table id="resultTable" class="table table-hover" style="display: none;">
                 <thead>
                     <!--<th>年級</th>-->
                     <th>課號</th>
@@ -47,15 +51,6 @@ $time = array("08:10~09:00", "09:10~10:00", "10:10~11:00", "11:10~12:00",
                     <th>時間</th>
                 </thead>
                 <tbody id="searchReslut">
-                    <!--
-                        <td><button type="button" class="btn btn-primary" onClick="add('207,208,209','EE351 A<br/>自動控制（一）<br/>黃英哲(Ying-Jeh Huang)')">加選</button></td>
-                    -->
-                    <tr>
-                        <div class="progress progress-striped active loadingbar">
-                            <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            </div>
-                        </div>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -72,7 +67,7 @@ $time = array("08:10~09:00", "09:10~10:00", "10:10~11:00", "11:10~12:00",
                 <th class="colum">Sat.</th>
                 <!--<th class="colum">Sat.</th>-->
             </thead>
-            <?php for($i = 1;$i < 13;$i++) {?>
+            <?php for($i = 1;$i < 14;$i++) {?>
             <tr>
                 <th>第<?=$i;?>節<br/><?=$time[$i-1];?></th>
                 <td id="1<?=str_pad($i, 2,'0',STR_PAD_LEFT);?>"></td>
