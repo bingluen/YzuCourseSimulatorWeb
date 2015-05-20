@@ -27,6 +27,6 @@ class CourseSelection extends Controller
     {
         $searchModel = $this->loadModel('searchCourse');
         if(!empty($_POST['key']) && !preg_match('/[[:cntrl:][:punct:][:space:]]/', $_POST['key']))
-            echo json_encode($searchModel->searchCourse($_POST['key']));
+            echo json_encode($searchModel->searchCourse($_POST['key'], 1041));
     }
 }

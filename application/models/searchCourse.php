@@ -18,11 +18,11 @@ class searchCourse
      * how to use more than one model in a controller (see application/controller/songs.php for more)
      */
 
-    function searchCourse($data) {
+    function searchCourse($data, $year = 1041) {
         try {
-            $sql = "SELECT * FROM `coursedatabase` WHERE `year` = '1032' AND (`code` LIKE ? OR `cname` LIKE ? OR `professor` LIKE ? OR `time` LIKE ?);";
+            $sql = "SELECT * FROM `coursedatabase` WHERE `year` = ? AND (`code` LIKE ? OR `cname` LIKE ? OR `professor` LIKE ? OR `time` LIKE ?);";
             $query = $this->db->prepare($sql);
-            $query->execute(array('%'.$data.'%', '%'.$data.'%', '%'.$data.'%', '%'.$data.'%'));
+            $query->execute(array($year ,'%'.$data.'%', '%'.$data.'%', '%'.$data.'%', '%'.$data.'%'));
             $result = $query->fetchAll();
         } catch(Exception $e) {
             throw new Exception($e->getMessage());
